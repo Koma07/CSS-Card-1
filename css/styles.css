@@ -25,11 +25,20 @@ body {
   color: var(--color-2);
 }
 
+main {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 650px;
+  height: 350px;
+}
+
 .card {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 450px;
+  flex-shrink: 1;
+  flex-basis: 500px;
   height: 250px;
   color: var(--color-4);
   background-color: var(--color-2);
@@ -96,6 +105,35 @@ body {
   border-radius: 4px;
   background: var(--color-2);
   cursor: pointer;
+}
+
+/* Media Querys */
+
+@media (min-width: 600px) {
+  .card {
+    /* background-color: red; */
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    height: 350px;
+  }
+
+  .card__profile-pic {
+    top: -30px;
+    left: 0 !important;
+  }
+  .card__info {
+    align-items: center;
+    top: -20px;
+    left: 0 !important;
+  }
+
+  .socials {
+    align-items: center !important;
+  }
 }
 
 /* Modifications */
